@@ -1,0 +1,47 @@
+<!--pages/home/home.wxml-->
+<view>
+  <swiper indicator-dots='true' autoplay='true' class='swiper'>
+    <block wx:for="{{bannerArr}}">
+      <swiper-item class="banner-item">
+        <image mode="aspectFill" src="{{item.url}}" class="item-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='home-main'>
+    <view class='home-main-header center'>
+      <div class="header-text">{{categoryData.title}}</div>
+    </view>
+    <view class='home-module-category clearfix'>
+      <view wx:for="{{categoryData.categoryList}}" class='box-item'>
+        <div class="center">
+          <image src='{{item.icon}}' class='img'></image>
+        </div>
+        <div class="center">{{item.name}}</div>
+      </view>
+    </view>
+
+    <view class="industry-module">
+      <view class="g-floor">
+        <div class="floor-title">餐饮行业内参</div>
+        <div class="floor-desc">给你不一样的餐饮行业咨询</div>
+      </view>
+      <view class=" hot-info-week-list" wx:for="{{cateringDate}}">
+      <navigator wx:for="{{item.ads}}" wx:for-item="ad" wx:for-index="idx" wx:key="id" class="ad-text {{ad.highLight?'high-text':''}}" url="/pages/consult/consult?keyWord={{ad.content}}">{{ad.content}}</navigator>
+        <a href="{{item.wapUrl}}" class="">
+          <div class=" hot-info-week-item">
+            <div class=" hot-info-week-left">
+              <p class=" hot-info-week-item-title">{{item.title}}</p>
+              <div class=" hot-info-week-body">
+                <p>{{item.remark}}</p>
+              </div>
+            </div>
+            <div class=" hot-info-week-right">
+              <image src='{{item.wapImgPath}}'></image>
+            </div>
+          </div>
+        </a>
+      </view>
+    </view>
+
+  </view>
+</view>
