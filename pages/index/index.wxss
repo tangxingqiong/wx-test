@@ -1,0 +1,4 @@
+/* pages/search/search.wxss */
+.form-box{
+  margin: 20px;
+}

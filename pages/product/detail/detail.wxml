@@ -1,0 +1,8 @@
+<view>
+  <view class="detail-module">
+    <view class='detail-title'>{{title}}</view>
+    <view class='detail-content'>
+      {{remark}}
+    </view>
+  </view>
+</view>

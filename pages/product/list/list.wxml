@@ -1,0 +1,12 @@
+<!--pages/product/product.wxml-->
+<import src="../../tpls/list/list-tpl.wxml"/>
+
+<view>
+  <view class="industry-module">
+    <view class="g-floor">
+      <div class="floor-title">餐饮行template</div>
+      <div class="floor-desc">给你不一样的餐饮行业咨询</div>
+    </view>
+    <template is="list" data="{{data: cateringDate}}"></template>
+  </view>
+</view> 

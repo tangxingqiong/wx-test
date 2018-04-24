@@ -1,0 +1,3 @@
+.hot-info-week-item.even-color .hot-info-week-left .hot-info-week-item-title {
+   color: brown; 
+}

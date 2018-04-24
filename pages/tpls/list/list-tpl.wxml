@@ -1,0 +1,17 @@
+<template name="list">
+  <view class=" hot-info-week-list" wx:for="{{data}}" wx:key="id">
+    <navigator url="/pages/product/detail/detail?remark={{item.remark}}&title={{item.title}}">
+        <div class=" hot-info-week-item {{index % 2 == 0 ? 'even-color' : ''}}"> 
+        <div class=" hot-info-week-left">
+          <p class=" hot-info-week-item-title">{{item.title}}</p>
+          <div class=" hot-info-week-body">
+            <p>{{item.remark}}</p>
+          </div>
+        </div>
+        <div class=" hot-info-week-right">
+          <image src='{{item.wapImgPath}}'></image>
+        </div>
+      </div>
+    </navigator>
+  </view>
+</template>

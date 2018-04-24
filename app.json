@@ -1,5 +1,48 @@
 {
   "pages": [
-    "pages/home/home"
-  ]
+    "pages/index/index",
+    "pages/home/home",
+    "pages/product/list/list",
+    "pages/product/detail/detail",
+    "pages/my/my"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff6900",
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "小程序",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/toolbar/order-no.png",
+        "selectedIconPath": "images/toolbar/order.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "index",
+        "iconPath": "images/toolbar/search-no.png",
+        "selectedIconPath": "images/toolbar/search.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/toolbar/me-no.png",
+        "selectedIconPath": "images/toolbar/me.png"
+      }
+    ],
+    "borderStyle": "white",
+    "selectedColor": "#ff6900"
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.0",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  },
+  "debug": true
 }

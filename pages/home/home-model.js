@@ -43,7 +43,7 @@ class Home extends Base{
     getCateringDate(callBack) {
       let me = this;
       let params = {
-        url: me.mUrl + "/wt/share/list?shardId=50&industryId=&top=10",
+        url: me.mUrl + "/wt/share/list?shardId=50&industryId=&top=5",
         sCallBack: function (res) {
           callBack && callBack(res.data);
         }

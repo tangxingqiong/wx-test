@@ -1,6 +1,7 @@
 class Base{
   constructor(){
   }
+  //API请求封装
   request(params){
     let url = params.url;
     !params.type && (params.type = 'GET');
@@ -19,6 +20,10 @@ class Base{
         console.error(err);
       }
     })
+  }
+  //获取元素上绑定的data值
+  getDataSet(event, key){
+    return event.currentTarget.dataset[key];
   }
 }
 

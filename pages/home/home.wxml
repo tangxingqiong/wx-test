@@ -1,9 +1,13 @@
 <!--pages/home/home.wxml-->
+<import src="../tpls/list/list-tpl.wxml"/>
+
 <view>
   <swiper indicator-dots='true' autoplay='true' class='swiper'>
-    <block wx:for="{{bannerArr}}">
-      <swiper-item class="banner-item">
-        <image mode="aspectFill" src="{{item.url}}" class="item-image" />
+    <block wx:for="{{bannerArr}}" wx:key="id">
+      <swiper-item class="banner-item"
+        bindtap='onBannerImgTap'
+        data-intro="{{item.intro}}">
+        <image mode="aspectFill" src="{{item.url}}" class="item-image"/>
       </swiper-item>
     </block>
   </swiper>
@@ -12,7 +16,7 @@
       <div class="header-text">{{categoryData.title}}</div>
     </view>
     <view class='home-module-category clearfix'>
-      <view wx:for="{{categoryData.categoryList}}" class='box-item'>
+      <view wx:for="{{categoryData.categoryList}}" class='box-item' wx:key="id">
         <div class="center">
           <image src='{{item.icon}}' class='img'></image>
         </div>
@@ -25,10 +29,9 @@
         <div class="floor-title">餐饮行业内参</div>
         <div class="floor-desc">给你不一样的餐饮行业咨询</div>
       </view>
-      <view class=" hot-info-week-list" wx:for="{{cateringDate}}">
-      <navigator wx:for="{{item.ads}}" wx:for-item="ad" wx:for-index="idx" wx:key="id" class="ad-text {{ad.highLight?'high-text':''}}" url="/pages/consult/consult?keyWord={{ad.content}}">{{ad.content}}</navigator>
-        <a href="{{item.wapUrl}}" class="">
-          <div class=" hot-info-week-item">
+      <view class=" hot-info-week-list" wx:for="{{cateringDate}}" wx:key="id">
+        <navigator url="/pages/product/detail/detail?remark={{item.remark}}&title={{item.title}}">
+           <div class=" hot-info-week-item {{index % 2 == 0 ? 'bgeee' : ''}}"> 
             <div class=" hot-info-week-left">
               <p class=" hot-info-week-item-title">{{item.title}}</p>
               <div class=" hot-info-week-body">
@@ -39,9 +42,16 @@
               <image src='{{item.wapImgPath}}'></image>
             </div>
           </div>
-        </a>
+        </navigator>
       </view>
     </view>
 
+    <view class="industry-module">
+      <view class="g-floor">
+        <div class="floor-title">餐饮行template</div>
+        <div class="floor-desc">给你不一样的餐饮行业咨询</div>
+      </view>
+      <template is="list" data="{{data: cateringDate}}"></template>
+    </view>
   </view>
 </view>
