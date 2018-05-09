@@ -7,8 +7,8 @@
       <input name="realname" placeholder="收件人姓名" />
       <input name="mobile" placeholder="手机号码" type="number"/>
       <button formType="submit" type="primary">Submit</button>
-      
+      <custom-checkbox class='custom-checkbox' id='999' title="你有空的时候看express吗"></custom-checkbox>
     </form>
-    <input bindconfirm="realnameConfirm" value='fjslfksdl'/>
+    <!-- <input bindconfirm="realnameConfirm" value='fjslfksdl'/> -->
   </view>
 </view>

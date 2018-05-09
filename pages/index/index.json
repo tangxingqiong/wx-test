@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "搜索页"
+  "navigationBarTitleText": "搜索页",
+  "usingComponents":{
+    "custom-checkbox": "./../../components/custom-checkobox/custom-checkobox"
+  }
 }

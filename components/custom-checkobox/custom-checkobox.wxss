@@ -1,0 +1,4 @@
+/* components/custom-checkobox/custom-checkobox.wxss */
+.label{
+  color: fuchsia;
+}
